@@ -1,0 +1,29 @@
+body {
+    background-color: aqua;
+    height: 100vh;
+
+}
+
+.main {
+    height: ;
+}
+
+.single-box {
+
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.square-container {
+    padding: 30px;
+
+    height: calc(100vh - 112px);
+    display: flex;
+    flex-wrap: wrap;
+}
