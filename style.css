@@ -1,7 +1,6 @@
 body {
-    background-color: aqua;
     height: 100vh;
-
+    background-color: #ccc;
 }
 
 .main {
@@ -15,7 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border: 4px outset #bbb;
+    background-color: #fff;
 
 }
 
@@ -26,4 +26,8 @@ body {
     height: calc(100vh - 112px);
     display: flex;
     flex-wrap: wrap;
+}
+
+.open-cell {
+    background-color: #ccc;
 }

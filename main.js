@@ -8,7 +8,6 @@ const squareContainer = document.getElementById("square-container");
 playButton.addEventListener("click", function () {
 
     function createBox() {
-
         for (let i = 1; i < 101; i++) {
             let box = document.createElement("div");
             box.className = "single-box";
@@ -19,8 +18,11 @@ playButton.addEventListener("click", function () {
             // box.textContent = box[i];
             console.log(box);
             box.addEventListener("click", function () {
-                box.classList.toggle("bg-success");
+                box.classList.toggle("open-cell");
                 console.log(i);
+                box.innerHTML = ("");
+
+
             });
 
         }
@@ -35,33 +37,33 @@ playButton.addEventListener("click", function () {
 
 // versione 2
 
-    // playButton.addEventListener("click", onBtnClick);
+// playButton.addEventListener("click", onBtnClick);
 
-    // //creiamo il singolo elemento
-    // function singleSquare() {
-    //     let box = document.createElement("div");
-    //     box.className = "single-box";
-    //     box.style.flexBasis = `calc(100% / 10)`;
+// //creiamo il singolo elemento
+// function singleSquare() {
+//     let box = document.createElement("div");
+//     box.className = "single-box";
+//     box.style.flexBasis = `calc(100% / 10)`;
 
-    //     box.addEventListener("click", function () {
-    //         box.classList.toggle("bg-success");
+//     box.addEventListener("click", function () {
+//         box.classList.toggle("open-cell");
+//         box.innerHTML = ("");
+//     });
+//     return (box);
+// }
 
-    //     });
-    //     return (box);
-    // }
+// //generiamone 100 al click
+// function onBtnClick() {
 
-    // //generiamone 100 al click
-    // function onBtnClick() {
-
-    //     const totalSquares = 101;
-    //     const grid = [];
-    //     for (let i = 1; i < totalSquares; i++) {
-    //         const singleBox = singleSquare();
-    //         grid.push(singleBox);
-    //         squareContainer.append(singleBox);
-    //         singleBox.innerHTML = (i);
-    //     }
-    //     console.log(grid)
+//     const totalSquares = 101;
+//     const grid = [];
+//     for (let i = 1; i < totalSquares; i++) {
+//         const singleBox = singleSquare();
+//         grid.push(singleBox);
+//         squareContainer.append(singleBox);
+//         singleBox.innerHTML = (i);
+//     }
+//     console.log(grid)
 
 
 
