@@ -1,7 +1,7 @@
 "use srict"
 const playButton = document.getElementById("playButton");
 const squareContainer = document.getElementById("square-container");
-
+const resetButton = document.getElementById("resetButton");
 // versione 1
 
 // creo una funzione per creare i box
@@ -38,6 +38,7 @@ const squareContainer = document.getElementById("square-container");
 
 playButton.addEventListener("click", onBtnClick);
 
+
 //creiamo il singolo elemento
 function singleSquare(textContent) {
     let box = document.createElement("div");
@@ -45,8 +46,8 @@ function singleSquare(textContent) {
     box.style.flexBasis = `calc(100% / 10)`;
     box.innerHTML = textContent;
     box.addEventListener("click", function () {
-        box.classList.toggle("open-cell");
-        console.log(box.innerHTML);
+        this.classList.toggle("open-cell");
+        // console.log(box.innerHTML);
         console.log(textContent);
         box.innerHTML = ("");
 
@@ -73,3 +74,9 @@ function onBtnClick() {
 
 
 }
+
+resetButton.addEventListener("click", function () {
+
+    location.reload();
+
+}) 
